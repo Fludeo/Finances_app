@@ -21,7 +21,7 @@ const resetToken =() =>{
 }
 const logout=(e: React.MouseEvent<HTMLElement, MouseEvent>)=>{
     e.preventDefault()
-    fetch('/auth/session', {method:'POST',
+    fetch(`${process.env.REACT_APP_PUBLIC_URL_API}/auth/session'`, {method:'POST',
     headers:{
         'Accept': 'application/json',
         'Content-Type': 'application/json',

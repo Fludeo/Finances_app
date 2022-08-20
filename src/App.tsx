@@ -51,7 +51,7 @@ function App() {
    fetch(`${process.env.REACT_APP_PUBLIC_URL_API}/auth/session`,{method:'POST'}).then(res=>res.json())
         .then(res=>res.accessToken!==undefined?
           isLogged(res.accessToken)
-          :navigate('/Finances_app'))
+          :navigate(``))
           .catch(err=>{console.log(err)})}
     return () =>{
       clearTimeout(refresh)

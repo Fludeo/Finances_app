@@ -1,6 +1,6 @@
 {
   "homepage": "https://fludeo.github.io/Finances_app",
-  "name": "client",
+  "name": "finances_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

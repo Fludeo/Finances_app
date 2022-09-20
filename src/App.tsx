@@ -22,7 +22,7 @@ function App() {
 
   const refreshSession = async()=>{
    try{
-    const response =  await fetch(`${process.env.REACT_APP_PUBLIC_URL_API}/auth/session`,{method:'POST'})
+    const response =  await fetch(`${process.env.REACT_APP_PUBLIC_URL_API}/auth/session`,{method:'POST', mode: 'no-cors'})
     const token = await response.json()
    
     setToken( await token.accessToken)

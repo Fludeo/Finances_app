@@ -2,7 +2,7 @@
 
 const getCategories=()=>{
     const categories ={
-        income:['Salary','Freelance job','Investmen returns'],
+        income:['Salary','Freelance job','Investment returns'],
         outgo:['Food','Clothes','Appliances','Services','Consumer electronics','Entertainment','Hobby','Taxes']
 }
 

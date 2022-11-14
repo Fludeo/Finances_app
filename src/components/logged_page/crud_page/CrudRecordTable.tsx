@@ -6,7 +6,7 @@ import { Record, RecordFormType } from "../../../types/types"
 import '../../styles/logged_page/crud_page/crud_record_table.css'
 import {BiEdit} from 'react-icons/bi'
 import  {MdDeleteForever} from 'react-icons/md'
-import Modal from "../../common/modal"
+import Modal from "../../common/Modal"
 import EditRecordForm from "./EditForm"
 import ConfirmDeleteForm from "./ConfirmDeleteForm"
 import  FormatDate from "../../../helper_functions/formatDate"

@@ -4,7 +4,7 @@ import {FaMoneyBillWave} from 'react-icons/fa'
 import { RiDatabase2Fill } from 'react-icons/ri'
 import { useNavigate } from "react-router-dom";
 import {LoginFormType, SignFormType }from '../../types/types'
-import Modal from '../common/modal';
+import Modal from '../common/Modal';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm'
 

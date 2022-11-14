@@ -1,7 +1,7 @@
 
 import React from 'react'
 import '@testing-library/jest-dom'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import LoginPage from './LoginPage'
 import { BrowserRouter } from 'react-router-dom'
 
@@ -19,6 +19,7 @@ const mockedProps = {
 
     const component = render(<BrowserRouter basename={process.env.PUBLIC_URL}> <LoginPage {...mockedProps} ></LoginPage></BrowserRouter>)
 
+    //Gets Header
     component.getByText('Alkemy')
 })
 

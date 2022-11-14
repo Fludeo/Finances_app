@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "./NavBar"
-import {Routes , Route, useNavigate, useLocation} from 'react-router-dom'
+import {Routes , Route} from 'react-router-dom'
 import HomePage from "./home_page/HomePage";
 import '../styles/logged_page/logged_page.css'
 import CrudPage from "./crud_page/CrudPage";

@@ -13,11 +13,6 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockedUsedNavigate,
 }));
 
-  
-
-
-  
-
 
 test('Renders NavBar',()=>{
 

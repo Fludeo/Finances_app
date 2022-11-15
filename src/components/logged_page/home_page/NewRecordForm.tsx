@@ -23,36 +23,36 @@ const NewRecordForm =({closeForm,handleRecordSubmit,UpdateForm,formFields}:props
     return(
     <form className="new-record-form">
         <label className='new-record-form__label' >Concept</label>
-        <input onChange={(e)=>UpdateForm({...formFields, concept: e.currentTarget.value.trim()})} 
+        <input name='concept' onChange={(e)=>UpdateForm({...formFields, concept: e.currentTarget.value.trim()})} 
         className='new-record-form__input' type="text"  />
 
         <label className='new-record-form__label' >Amount</label>
-        <input type='number' step={0.01} min={1} onChange={(e)=>UpdateForm({...formFields, amount: Number(e.currentTarget.value)})} 
+        <input name='amount' type='number' step={0.01} min={1} onChange={(e)=>UpdateForm({...formFields, amount: Number(e.currentTarget.value)})} 
         className='new-record-form__input' />
         <div className='new-record-form__checkbbox-container'>
             <div className='new-record-form__checkbox'>
-            <input checked={checkBox.income} type='checkbox' value={'income'} name='type' 
+            <input checked={checkBox.income} type='checkbox' value={'income'} name='type-income' 
             onClick={()=>setCheckBox({income:true,outgo:false})}
             onChange={(e)=>UpdateForm({...formFields, type: e.currentTarget.value})}/>
             <label className='new-record-form__label' >Income</label>
             </div>
             <div className='new-record-form__checkbox'>
-            <input checked={checkBox.outgo} type='checkbox' value={'outgo'} name='type' 
+            <input checked={checkBox.outgo} type='checkbox' value={'outgo'} name='type-outgo' 
             onClick={()=>setCheckBox({income:false,outgo:true})}
             onChange={(e)=>UpdateForm({...formFields, type: e.currentTarget.value})}/>
             <label className='new-record-form__label ' >Outgo</label>
             </div>
         </div>
-        {checkBox.outgo&&<select onChange={(e)=>UpdateForm({...formFields,category:e.currentTarget.value})}  className='new-record-form__input'>
+        {checkBox.outgo&&<select name='outgo-category' onChange={(e)=>UpdateForm({...formFields,category:e.currentTarget.value})}  className='new-record-form__input'>
             <option value="">Choose category</option>
             {getCategories().outgo.map(category=><option key={category} value={category}>{category}</option>)}
         </select>}
-        {checkBox.income&&<select onChange={(e)=>UpdateForm({...formFields,category:e.currentTarget.value})}  className='new-record-form__input'>
+        {checkBox.income&&<select name='income-category' onChange={(e)=>UpdateForm({...formFields,category:e.currentTarget.value})}  className='new-record-form__input'>
             <option value="">Choose category</option>
             {getCategories().income.map(category=><option key={category} value={category}>{category}</option>)}
         </select>}
         <label className='new-record-form__label' >Date</label>
-        <input onChange={(e)=>UpdateForm({...formFields, date: new Date(e.currentTarget.value)})} 
+        <input name='date' onChange={(e)=>UpdateForm({...formFields, date: new Date(e.currentTarget.value)})} 
         className='new-record-form__input' type="date"  />
          <p className='new-record-form__error'>{formFields.errorMessage}</p>
          <div className='new-record-form__button-container'>

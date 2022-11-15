@@ -25,19 +25,19 @@ const EditRecordForm =({closeForm,handleSubmit,UpdateForm, formData ,type}:props
     return(
     <form className="edit-record-form">
         <label className='edit-record-form__label' >Concept</label>
-        <input defaultValue={formData.concept?formData.concept:''} onChange={(e)=>UpdateForm({...formData, concept: e.currentTarget.value.trim()})} 
+        <input name='concept' defaultValue={formData.concept?formData.concept:''} onChange={(e)=>UpdateForm({...formData, concept: e.currentTarget.value.trim()})} 
         className='edit-record-form__input' type="text"  />
 
         <label className='edit-record-form__label' >Amount</label>
-        <input defaultValue={formData.amount?formData.amount:0} type='number' step={0.01} min={1} onChange={(e)=>UpdateForm({...formData, amount: Number(e.currentTarget.value)})} 
+        <input name='amount' defaultValue={formData.amount?formData.amount:0} type='number' step={0.01} min={1} onChange={(e)=>UpdateForm({...formData, amount: Number(e.currentTarget.value)})} 
         className='edit-record-form__input' />
         <label className='edit-record-form__label' >Category</label>
-        <select onChange={(e)=>UpdateForm({...formData,category:e.currentTarget.value})} defaultValue={formData.category?formData.category:''} className='edit-record-form__input'>
+        <select name={`${type}-category`} onChange={(e)=>UpdateForm({...formData,category:e.currentTarget.value})} defaultValue={formData.category?formData.category:''} className='edit-record-form__input'>
             <option value="">Choose category</option>
             {getCategories()[type].map(category=><option key={category} value={category}>{category}</option>)}
         </select>
         <label className='edit-record-form__label' >Date</label>
-        <input 
+        <input name='date'
         defaultValue={formData.date?FormatDate(formData.date):''} 
         onChange={(e)=>UpdateForm({...formData, date: new Date(e.currentTarget.value)})} 
         className='edit-record-form__input' type="date"  />

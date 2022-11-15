@@ -19,10 +19,10 @@ const LoginForm =({handleLogin,UpdateForm,formFields}:props) =>{
     return(
     <form className="login-form">
         <label className='login-form__label' >Email</label>
-        <input onChange={(e)=>UpdateForm({...formFields, email: e.currentTarget.value})} 
+        <input name='email' onChange={(e)=>UpdateForm({...formFields, email: e.currentTarget.value})} 
         className='login-form__input' type="text"  />
         <label className='login-form__label' >Password </label>
-        <input onChange={(e)=>UpdateForm({...formFields, password: e.currentTarget.value})}
+        <input name='password' onChange={(e)=>UpdateForm({...formFields, password: e.currentTarget.value})}
          className='login-form__input' type="password" />
          <div className='login-form__button-container'>
         <button onClick={handleLogin} className='login-form__login-button login-form__login-button--hover'>Log in</button>

@@ -5,6 +5,7 @@ TypeScript version
 - Install the project with <code>npm install</code>
 - Create .env and .env.test (in root folder) files with variables listed in .env.dist
 - Run the app with <code>npm run start</code> or <code>npm run start:test</code> for e2e testing
+- Run unit tests with <code>npm run test</code> 
 
 # Introduction
 This is the frontend repository of https://fludeo.github.io/Finances_app/ webApp (backend repo: https://github.com/Fludeo/Finances). The app is a basic Crud for tracking personal finance records. Signup or Login with: email: test@email.com, password: qwerty1234 to see an account with some data.

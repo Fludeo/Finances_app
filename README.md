@@ -11,7 +11,7 @@ This is the frontend repository of https://fludeo.github.io/Finances_app/ webApp
 
 # Details
 This app (server) is built with TypeScript and React.js
-The app is tested with cypress, react-testing-library and jest. Use <code>npx run test</code> to run all tests. Run <code>npm run start:test</code> to run the app in test mode for e2e testing (same script in backend). By default <code>npm run start:test</code> makes http://localhost:8080 your url for api calls, if you want to use another port, change the script and make sure is the same port number that backend is using.
+The app is tested with cypress, react-testing-library and jest. Use <code>npx run test</code> to run all tests. Run <code>npm run cypress:open</code>to open cypress and Use <code>npm run start:test</code> (in another terminal) to run the app in test mode for e2e testing (same script in backend). By default <code>npm run start:test</code> makes http://localhost:8080 your url for api calls, if you want to use another port, change the script and make sure is the same port number that backend is using.
 
 # C4 diagram
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import FormatDate from "../../src/helper_functions/formatDate"
 
 
@@ -13,7 +14,7 @@ beforeEach(()=>{
   //Register user 
 const signUpButton = cy.get('.login-page__signup-button')
   signUpButton.click()
-  cy.get('.signup-form').within((signupForm)=>{
+  cy.get('.signup-form').within((_signupForm)=>{
     cy.get('[name=name]').type(newUser.name)
     cy.get('.signup-form__signup-button').click()
     cy.get('[name=email]').type(newUser.email)
@@ -25,7 +26,7 @@ const signUpButton = cy.get('.login-page__signup-button')
   })
  
 //Logs in created user
-  cy.get('.login-form').within((loginForm)=>{
+  cy.get('.login-form').within((_loginForm)=>{
     cy.get('[name=email]').type(newUser.email)
     cy.get('.login-form__login-button').click()
     cy.get('[name=password]').type(newUser.password)
@@ -40,7 +41,7 @@ const signUpButton = cy.get('.login-page__signup-button')
 it('Adds 2 new record from home page',()=>{
   cy.get('.balance__button').click()
 
-  cy.get('.new-record-form').within((newRecordForm)=>{
+  cy.get('.new-record-form').within((_newRecordForm)=>{
     cy.get('[name=concept]').type('new income')
     cy.get('.new-record-form__accept-button').click()
     cy.get('[name=amount]').type('200')
@@ -57,7 +58,7 @@ it('Adds 2 new record from home page',()=>{
 cy.get('.balance__button').click()
 
 
-cy.get('.new-record-form').within((newRecordForm2)=>{
+cy.get('.new-record-form').within((_newRecordForm2)=>{
   cy.get('[name=concept]').type('new outgo')
   cy.get('[name=amount]').type('500')
   cy.get('[name=type-outgo]').check()
@@ -78,7 +79,7 @@ it('Adds and filters 4 new record from crud page',()=>{
   cy.get('.table__new-button').first().click()
 
 
-  cy.get('.edit-record-form').within((editRecordForm)=>{
+  cy.get('.edit-record-form').within((_editRecordForm)=>{
     cy.get('[name=concept]').type('new income 1')
     cy.get('.edit-record-form__accept-button').click()
     cy.get('[name=amount]').clear().type('2000')
@@ -93,7 +94,7 @@ it('Adds and filters 4 new record from crud page',()=>{
 cy.get('.table__new-button').first().click()
 
 
-cy.get('.edit-record-form').within((editRecordForm)=>{
+cy.get('.edit-record-form').within((_editRecordForm)=>{
   cy.get('[name=concept]').type('new income 2')
   cy.get('[name=amount]').clear().type('1000')
   cy.get('[name=income-category]').select('Freelance job')
@@ -105,7 +106,7 @@ cy.get('.edit-record-form').within((editRecordForm)=>{
 cy.get('.table__new-button').last().click()
 
 
-cy.get('.edit-record-form').within((editRecordForm)=>{
+cy.get('.edit-record-form').within((_editRecordForm)=>{
   cy.get('[name=concept]').type('new outgo 1')
   cy.get('[name=amount]').clear().type('1000')
   cy.get('[name=outgo-category]').select('Services')
@@ -117,7 +118,7 @@ cy.get('.edit-record-form').within((editRecordForm)=>{
 cy.get('.table__new-button').last().click()
 
 
-cy.get('.edit-record-form').within((editRecordForm)=>{
+cy.get('.edit-record-form').within((_editRecordForm)=>{
   cy.get('[name=concept]').type('new outgo 2')
   cy.get('[name=amount]').clear().type('500')
   cy.get('[name=outgo-category]').select('Food')
@@ -137,7 +138,7 @@ cy.get('.crud-table__filter').last().select('Food')
 it('Adds 2 records in home page, edits 1 and deletes 1 from crud page',()=>{
   cy.get('.balance__button').click()
 
-  cy.get('.new-record-form').within((newRecordForm)=>{
+  cy.get('.new-record-form').within((_newRecordForm)=>{
     cy.get('[name=concept]').type('new income')
     cy.get('.new-record-form__accept-button').click()
     cy.get('[name=amount]').type('200')
@@ -154,7 +155,7 @@ it('Adds 2 records in home page, edits 1 and deletes 1 from crud page',()=>{
 cy.get('.balance__button').click()
 
 
-cy.get('.new-record-form').within((newRecordForm2)=>{
+cy.get('.new-record-form').within((_newRecordForm2)=>{
   cy.get('[name=concept]').type('new outgo')
   cy.get('[name=amount]').type('500')
   cy.get('[name=type-outgo]').check()
@@ -169,7 +170,7 @@ cy.get('.links__text').last().click()
 
 cy.get('.crud-table .crud-table__edit-icon').first().click()
 
-cy.get('.edit-record-form').within((editRecordForm)=>{
+cy.get('.edit-record-form').within((_editRecordForm)=>{
   cy.get('[name=concept]').clear().type('edited income')
   cy.get('[name=amount]').clear().type('2000')
   cy.get('[name=income-category]').select('Freelance job')
@@ -196,7 +197,7 @@ it('Login a non existent user',()=>{
 //logout
   cy.get('.links__logout-button').click()
 
-  cy.get('.login-form').within((loginForm)=>{
+  cy.get('.login-form').within((_loginForm)=>{
     cy.get('[name=email]').type('nonexistent@email.com')
     cy.get('.login-form__login-button').click()
     cy.get('[name=password]').type('qwerty1234')
@@ -213,7 +214,7 @@ it('Register an existent user',()=>{
   //Register user 
 const signUpButton = cy.get('.login-page__signup-button')
 signUpButton.click()
-cy.get('.signup-form').within((signupForm)=>{
+cy.get('.signup-form').within((_signupForm)=>{
   cy.get('[name=name]').type(newUser.name)
   cy.get('[name=email]').type(newUser.email)
   cy.get('[name=password]').type(newUser.password)

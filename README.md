@@ -20,3 +20,11 @@ The app is tested with cypress, react-testing-library and jest. Use <code>npx ru
 ![Architecture-Page-2](https://user-images.githubusercontent.com/55941066/200713146-28fc3d31-f2ca-4351-9040-363989ab6f52.jpg)
 ![Architecture-Page-3](https://user-images.githubusercontent.com/55941066/200713151-d4365ffa-343b-420f-86cf-a5bc820ff188.jpg)
 
+# e2e testing and frontend unit test.
+
+https://user-images.githubusercontent.com/55941066/204586489-eda42d07-556a-491d-949f-e4b6cf29540f.mp4
+
+
+
+https://user-images.githubusercontent.com/55941066/204587265-649687c3-6566-43b8-99d6-46f566865691.mp4
+

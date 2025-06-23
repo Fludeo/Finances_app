@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../../styles/logged_page/home_page/home_page.css'
 import { useNavigate } from "react-router-dom";
 import Modal from "../../common/Modal";
+
 import NewRecordForm from "./NewRecordForm";
 import { RecordFormType } from "../../../types/types";
 import TotalBalance from "./TotalBalance";
